@@ -13,7 +13,13 @@ module.exports = {
         'neutral-white': '#FFFFFF',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+      },
+      boxShadow: {
+        'xl': '0 8px 32px 0 rgba(42,92,139,0.10)',
+      },
+      borderRadius: {
+        '2xl': '1.5rem',
       },
     },
   },
