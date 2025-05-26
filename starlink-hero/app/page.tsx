@@ -277,20 +277,29 @@ export default function StarlinkInvestmentPlatform() {
   }, [controls])
 
   // Generate particles
-  const particles = Array.from({ length: 300 }, (_, i) => ({
-    id: i,
-    delay: Math.random() * 10,
-    duration: 8 + Math.random() * 4,
-    startX: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1200),
-    startY: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 800),
-  }))
-
+  const [particles, setParticles] = useState<Array<{id:number,delay:number,duration:number,startX:number,startY:number}>>([])
+  useEffect(() => {
+    const width = window.innerWidth || 1200;
+    const height = window.innerHeight || 800;
+    const generated = Array.from({ length: 300 }, (_, i) => ({
+      id: i,
+      delay: Math.random() * 10,
+      duration: 8 + Math.random() * 4,
+      startX: Math.random() * width,
+      startY: Math.random() * height,
+    }))
+    setParticles(generated)
+  }, [])
   // Generate light rays
-  const lightRays = Array.from({ length: 8 }, (_, i) => ({
-    id: i,
-    angle: i * 45 + Math.random() * 20 - 10,
-    delay: Math.random() * 2,
-  }))
+  const [lightRays, setLightRays] = useState<Array<{id:number,angle:number,delay:number}>>([])
+  useEffect(() => {
+    const generated = Array.from({ length: 8 }, (_, i) => ({
+      id: i,
+      angle: i * 45 + Math.random() * 20 - 10,
+      delay: Math.random() * 2,
+    }))
+    setLightRays(generated)
+  }, [])
 
   const investmentPlans = [
     {
