@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
+  "installCommand": "pnpm install",
   "env": {
     "NEXT_PUBLIC_SUPABASE_URL": "https://ilgoarfvisliseckqnqv.supabase.co",
     "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlsZ29hcmZ2aXNsaXNlY2txbnF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgxMjg5NzUsImV4cCI6MjA2MzcwNDk3NX0.bS8LCrzmhxreSV5m29EQ6BMkkgD-iOF3JM4KYMHBVgw",
