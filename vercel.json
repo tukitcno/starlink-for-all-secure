@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build",
+  "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "env": {
     "NEXT_PUBLIC_SUPABASE_URL": "https://ilgoarfvisliseckqnqv.supabase.co",
